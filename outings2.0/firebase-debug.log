@@ -1,0 +1,49 @@
+[debug] [2018-02-12T15:19:43.366Z] ----------------------------------------------------------------------
+[debug] [2018-02-12T15:19:43.368Z] Command:       /Users/azm16/.nvm/versions/node/v7.2.1/bin/node /Users/azm16/.nvm/versions/node/v7.2.1/bin/firebase deploy
+[debug] [2018-02-12T15:19:43.368Z] CLI Version:   3.17.4
+[debug] [2018-02-12T15:19:43.368Z] Platform:      darwin
+[debug] [2018-02-12T15:19:43.368Z] Node Version:  v7.2.1
+[debug] [2018-02-12T15:19:43.369Z] Time:          Mon Feb 12 2018 10:19:43 GMT-0500 (EST)
+[debug] [2018-02-12T15:19:43.369Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-12T15:19:43.383Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-12T15:19:43.383Z] > authorizing via signed-in user
+[debug] [2018-02-12T15:19:43.385Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-12T15:19:43.385Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/eRFt8-_updR7eAT7y-v7UC7adJ1gF_qXi48Rqoax9G9u374tsocCQYdG9SRTeymt',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Feb 12 2018 10:19:43 GMT-0500 (EST)
+[debug] [2018-02-12T15:19:43.536Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T15:19:43.539Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/outings-two-point-oh  
+  
+ Mon Feb 12 2018 10:19:43 GMT-0500 (EST)
+[debug] [2018-02-12T15:19:43.981Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T15:19:43.982Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/outings-two-point-oh/tokens  
+  
+ Mon Feb 12 2018 10:19:43 GMT-0500 (EST)
+[debug] [2018-02-12T15:19:44.475Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'outings-two-point-oh'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-02-12T15:20:05.142Z] >>> HTTP REQUEST PUT https://outings-two-point-oh.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+}
+ 
+ Mon Feb 12 2018 10:20:05 GMT-0500 (EST)
+[debug] [2018-02-12T15:20:05.913Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database outings-two-point-oh is valid
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-02-12T15:20:05.936Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/outings-two-point-oh/uploads/-L59aVUk58BlQlFOBGjk?fileCount=2&message=  
+  
+ Mon Feb 12 2018 10:20:05 GMT-0500 (EST)
+[debug] [2018-02-12T15:20:06.731Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T15:20:06.731Z] [hosting] .tgz uploaded successfully, waiting for extraction
