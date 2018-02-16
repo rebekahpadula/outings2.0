@@ -129,7 +129,6 @@ export default (props) => {
           <SubmitButton className="button" onClick={
             () => {
               const obj = {
-                // suggestor: document.getElementById('name').value,
                 title: document.getElementById('title').value,
                 time: document.getElementById('time').value,
                 date: document.getElementById('date').value,

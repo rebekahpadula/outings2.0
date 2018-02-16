@@ -61,7 +61,7 @@ export default class App extends Component {
     this.ref = database.ref().child('suggestions');
     this.state = {
       suggestions: [],
-      authenticated: true,
+      authenticated: false,
       loading: false,
       modalActive: false,
       suggestionsModalActive: false
@@ -75,6 +75,7 @@ export default class App extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.openSuggestionsModal = this.openSuggestionsModal.bind(this);
     this.closeSuggestionsModal = this.closeSuggestionsModal.bind(this);
+    this.addMeridian = this.addMeridian.bind(this);
   }
 
   addSuggestion(suggestion) {
@@ -82,12 +83,10 @@ export default class App extends Component {
       this.ref.push(suggestion);
       return Object.assign({}, {suggestions: [...prevState.suggestions, suggestion], suggestionsModalActive: false});
     });
-    // document.getElementById('name').value = '';
     document.getElementById('time').value = '';
     document.getElementById('date').value = '';
     document.getElementById('location').value = '';
     document.getElementById('more-info').value = '';
-
   }
 
   updateVotes(id, type) {
@@ -111,12 +110,33 @@ export default class App extends Component {
     });
   }
 
+  addMeridian() {
+    let time = document.getElementById('time'),
+        hours,
+        minutes,
+        meridian;
+    let timeSplit = time.value.split(':');
+    hours = time[0];
+    minutes = time[1];
+    if (hours > 12) {
+      meridian = 'PM';
+      hours -= 12;
+    } else if (hours < 12) {
+      meridian = 'AM';
+      if (hours == 0) {
+        hours = 12;
+      } else {
+        meridian = 'PM';
+      }
+      return meridian;
+    }
+  }
+
   // lets users log in with facebook
   authWithFacebook() {
     // creates an instance of the Facebook provider object
     let provider = new firebase.auth.FacebookAuthProvider();
     provider.addScope('public_profile');
-
     // popup as opposed to redirecting
     firebase.auth().signInWithPopup(provider).then(result => {
       // updates state
@@ -194,6 +214,15 @@ export default class App extends Component {
         suggestions: newState
       });
     });
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if(user) {
+        // does this actually work how I think it does? 
+        this.setState({ authenticated: true });
+      } else {
+        this.setState({ authenticated: false });
+      }
+    });
   }
 
   componentWillMount() {
@@ -232,7 +261,7 @@ export default class App extends Component {
             <ContentMessage>Outings lets you create an event with all the important details so your team can see the plan and thumbs up the events they're interested in, and thumbs down the ones they're not.</ContentMessage>
           </Content>
           <Suggestions suggestions={this.state.suggestions} voteFunction={this.updateVotes} openSuggestionsModal={this.openSuggestionsModal}/>
-          <SuggestionForm addSuggestion={this.addSuggestion} suggestionsModalActive={this.state.suggestionsModalActive} openSuggestionsModal={this.openSuggestionsModal} closeSuggestionsModal={this.closeSuggestionsModal} key={this.state.key}/>
+          <SuggestionForm addSuggestion={this.addSuggestion} suggestionsModalActive={this.state.suggestionsModalActive} openSuggestionsModal={this.openSuggestionsModal} closeSuggestionsModal={this.closeSuggestionsModal} key={this.state.key} addMeridian={this.addMeridian}/>
           <Footer></Footer>
         </Outings>
       );
