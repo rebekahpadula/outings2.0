@@ -41,7 +41,6 @@ const FormLabel = styled.label`
   font-size: 18px;
   display: block;
   text-align: left;
-  /* text-transform: uppercase; */
   margin-bottom: 5px;
 `;
 
@@ -52,6 +51,11 @@ const FormInput = styled.input`
   border-radius: 3px;
   border: 1px solid #eee;
   font-size: 18px;
+`;
+
+const OptionalFlag = styled.span`
+  font-size: 16px;
+  color: #545454;
 `;
 
 const SubmitButton = styled.button`
@@ -102,29 +106,25 @@ export default (props) => {
       <Form suggestionsModalActive={props.suggestionsModalActive}>
       <CloseButton onClick={props.closeSuggestionsModal}>X</CloseButton>
       <FormHeading>Plan an outing!</FormHeading>
-        {/* <FormSection>
-          <FormLabel htmlFor="name">Your name</FormLabel>
-          <FormInput type="text" id="name" maxlengh="25"/>
-        </FormSection> */}
         <FormSection>
           <FormLabel htmlFor="title">Title</FormLabel>
-          <FormInput type="text" id="title" maxlengh="25"/>
+          <FormInput type="text" id="title" maxlengh="25" required/>
         </FormSection>
         <FormSection>
           <FormLabel htmlFor="time">Time</FormLabel>
-          <FormInput type="time" id="time"/>
+          <FormInput type="time" id="time" required/>
         </FormSection>
         <FormSection>
           <FormLabel htmlFor="date">Date</FormLabel>
-          <FormInput type="date" id="date"/>
+          <FormInput type="date" id="date" required/>
         </FormSection>
         <FormSection>
           <FormLabel htmlFor="location">Location</FormLabel>
-          <FormInput type="text" id="location"/>
+          <FormInput type="text" id="location" required/>
         </FormSection>
         <FormSection>
-          <FormLabel htmlFor="more-info">More info</FormLabel>
-          <FormTextArea name="textarea" id="more-info"/>
+          <FormLabel htmlFor="more-info">More info <OptionalFlag>(optional)</OptionalFlag></FormLabel>
+          <FormTextArea name="textarea" id="more-info" required/>
         </FormSection>
           <SubmitButton className="button" onClick={
             () => {

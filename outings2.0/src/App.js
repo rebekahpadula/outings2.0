@@ -64,7 +64,8 @@ export default class App extends Component {
       authenticated: false,
       loading: false,
       modalActive: false,
-      suggestionsModalActive: false
+      suggestionsModalActive: false,
+      currentUser: null
     }
     this.addSuggestion = this.addSuggestion.bind(this);
     this.updateVotes = this.updateVotes.bind(this);
@@ -75,7 +76,8 @@ export default class App extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.openSuggestionsModal = this.openSuggestionsModal.bind(this);
     this.closeSuggestionsModal = this.closeSuggestionsModal.bind(this);
-    this.addMeridian = this.addMeridian.bind(this);
+    
+    console.log(this.state);
   }
 
   addSuggestion(suggestion) {
@@ -110,28 +112,6 @@ export default class App extends Component {
     });
   }
 
-  addMeridian() {
-    let time = document.getElementById('time'),
-        hours,
-        minutes,
-        meridian;
-    let timeSplit = time.value.split(':');
-    hours = time[0];
-    minutes = time[1];
-    if (hours > 12) {
-      meridian = 'PM';
-      hours -= 12;
-    } else if (hours < 12) {
-      meridian = 'AM';
-      if (hours == 0) {
-        hours = 12;
-      } else {
-        meridian = 'PM';
-      }
-      return meridian;
-    }
-  }
-
   // lets users log in with facebook
   authWithFacebook() {
     // creates an instance of the Facebook provider object
@@ -146,7 +126,6 @@ export default class App extends Component {
       // the signed-in user info
       let user = result.user;
       let userName = user.displayName;
-      console.log(userName);
       // handles errors
     }).catch(error => {
       let errorCode = error.code;
@@ -217,10 +196,10 @@ export default class App extends Component {
 
     firebase.auth().onAuthStateChanged((user) => {
       if(user) {
-        // does this actually work how I think it does? 
-        this.setState({ authenticated: true });
+        // does this actually check to see if the user is authenticated? 
+        this.setState({ authenticated: true, currentUser: user.displayName});
       } else {
-        this.setState({ authenticated: false });
+        this.setState({ authenticated: false, currentUser: null });
       }
     });
   }
@@ -256,7 +235,7 @@ export default class App extends Component {
     } else {
       return (
         <Outings>
-          <Header authenticated={this.state.authenticated} logOut={this.logOut}/>
+          <Header authenticated={this.state.authenticated} logOut={this.logOut} currentUser={this.state.currentUser}/>
           <Content>
             <ContentMessage>Outings lets you create an event with all the important details so your team can see the plan and thumbs up the events they're interested in, and thumbs down the ones they're not.</ContentMessage>
           </Content>

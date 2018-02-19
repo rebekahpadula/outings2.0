@@ -62,6 +62,8 @@ const LogOutButton = styled.button`
     }
 `;
 
+const Greeting = styled.p``;
+
 export default (props) => {
     if(props.authenticated === false) {
         return (
@@ -80,6 +82,7 @@ export default (props) => {
               <Authentication>
                   <AuthenticationHeading>Log out</AuthenticationHeading>
                   <LogOutButton onClick={props.logOut}>Log Out</LogOutButton>
+                  <Greeting>Hello, {props.currentUser}.</Greeting>
               </Authentication>
           </Header>
         );

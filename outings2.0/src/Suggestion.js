@@ -65,13 +65,7 @@ const Thumb = styled.span`
 `;
 
 const SuggestionTitle = styled.h1``;
-const Suggestor = styled.p``;
-const Activity = styled.p``;
-const Place = styled.p``;
-const Time = styled.p``;
-
 const SuggestionInfo = styled.p``;
-
 const SuggestionIcon = styled.img`
   width: 20px;
   margin-right: 10px;
