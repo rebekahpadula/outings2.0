@@ -50,7 +50,7 @@ const LogOutButton = styled.button`
     color: #fafafa;
     cursor: pointer;
     font-size: 18px;
-    padding: 15px 20px;
+    padding: 15px 15px;
     width: 100%;
 
     :hover {
@@ -62,7 +62,10 @@ const LogOutButton = styled.button`
     }
 `;
 
-const Greeting = styled.p``;
+const Greeting = styled.p`
+    margin-right: 80px;
+    font-weight: bold;
+`;
 
 export default (props) => {
     if(props.authenticated === false) {
@@ -78,12 +81,12 @@ export default (props) => {
     } else {
         return (
           <Header>
-              <HeaderHeading>Outings</HeaderHeading>
-              <Authentication>
-                  <AuthenticationHeading>Log out</AuthenticationHeading>
-                  <LogOutButton onClick={props.logOut}>Log Out</LogOutButton>
-                  <Greeting>Hello, {props.currentUser}.</Greeting>
-              </Authentication>
+            <HeaderHeading>Outings</HeaderHeading>
+            <Greeting>Hello, {props.currentUser}</Greeting>
+            <Authentication>
+                <AuthenticationHeading>Log out</AuthenticationHeading>
+                <LogOutButton onClick={props.logOut}>Log Out</LogOutButton>
+            </Authentication>
           </Header>
         );
     }

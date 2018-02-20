@@ -84,14 +84,16 @@ export default (props) => {
         <VoteButton><Thumb  
           onClick={(e)=> {props.voteFunction(props.id, 'down')}} 
           role="img"
-          aria-label="thumbs down">
+          aria-label="thumbs down"
+          id="thumbs-down">
           👎
         </Thumb>
         <VotesCount>{props.suggestion.downVotes}</VotesCount></VoteButton>
         <VoteButton><Thumb 
           onClick={(e)=> {props.voteFunction(props.id, 'up')}}
           role="img" 
-          aria-label="thumbs up">
+          aria-label="thumbs up"
+          id="thumbs-up">
           👍
         </Thumb>
         <VotesCount>{props.suggestion.upVotes}</VotesCount></VoteButton>

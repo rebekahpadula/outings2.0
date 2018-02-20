@@ -76,8 +76,6 @@ export default class App extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.openSuggestionsModal = this.openSuggestionsModal.bind(this);
     this.closeSuggestionsModal = this.closeSuggestionsModal.bind(this);
-    
-    console.log(this.state);
   }
 
   addSuggestion(suggestion) {
@@ -93,6 +91,19 @@ export default class App extends Component {
 
   updateVotes(id, type) {
     // setState always sends the previous state to the first param in the function you provide
+    let thumbsUp = document.getElementById('thumbs-up');
+    let thumbsDown = document.getElementById('thumbs-down');
+    let thumbsUpButton = thumbsUp.parentElement;
+    let thumbsDownButton = thumbsDown.parentElement;
+
+    // say something here like, if they do have those attributes, DO NOTHING.
+    // if they DONT have those attribtues, then update the code. but what if
+    // people want to undo a vote? 
+    // and at the end of this function after someone clicks up or down and it updates the state,
+    // this function should disable the buttons - does that also stop the counter once they're 
+    // disabled and the function "returns" or something once the buttons have the 
+    // disabled attribute?
+
     this.setState((prevState) => {
       const newSuggestions = prevState.suggestions;
       let index = -1;
@@ -106,10 +117,12 @@ export default class App extends Component {
       } else if(type === 'down') {
         newSuggestions[index].downVotes++;
       }
+
       return {
         suggestions: newSuggestions
       };
     });
+
   }
 
   // lets users log in with facebook
@@ -240,7 +253,7 @@ export default class App extends Component {
             <ContentMessage>Outings lets you create an event with all the important details so your team can see the plan and thumbs up the events they're interested in, and thumbs down the ones they're not.</ContentMessage>
           </Content>
           <Suggestions suggestions={this.state.suggestions} voteFunction={this.updateVotes} openSuggestionsModal={this.openSuggestionsModal}/>
-          <SuggestionForm addSuggestion={this.addSuggestion} suggestionsModalActive={this.state.suggestionsModalActive} openSuggestionsModal={this.openSuggestionsModal} closeSuggestionsModal={this.closeSuggestionsModal} key={this.state.key} addMeridian={this.addMeridian}/>
+          <SuggestionForm addSuggestion={this.addSuggestion} suggestionsModalActive={this.state.suggestionsModalActive} openSuggestionsModal={this.openSuggestionsModal} closeSuggestionsModal={this.closeSuggestionsModal} key={this.state.key}/>
           <Footer></Footer>
         </Outings>
       );

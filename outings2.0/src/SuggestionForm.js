@@ -124,7 +124,7 @@ export default (props) => {
         </FormSection>
         <FormSection>
           <FormLabel htmlFor="more-info">More info <OptionalFlag>(optional)</OptionalFlag></FormLabel>
-          <FormTextArea name="textarea" id="more-info" required/>
+          <FormTextArea name="textarea" id="more-info"/>
         </FormSection>
           <SubmitButton className="button" onClick={
             () => {
