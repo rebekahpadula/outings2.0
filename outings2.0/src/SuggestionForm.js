@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
 
 const FormModal = styled.section`
   background-color: rgba(0, 0, 0, 0.5);
@@ -130,7 +131,9 @@ export default (props) => {
             () => {
               const obj = {
                 title: document.getElementById('title').value,
-                time: document.getElementById('time').value,
+                // this formatting is for the date and time, and I'm displaying those separately, so need
+                // to find something for that
+                time: moment(document.getElementById('time').value).format('MMM Do YY'),
                 date: document.getElementById('date').value,
                 location: document.getElementById('location').value,
                 moreInfo: document.getElementById('more-info').value,
