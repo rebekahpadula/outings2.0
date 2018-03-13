@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Header from './components/Header';
+import Shows from './components/Shows';
 
 import NavIcon from './assets/icon-menu.svg';
 import CloseIcon from './assets/icon-close.svg';
@@ -34,7 +35,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <Header toggleNavigation={this.toggleNavigation}></Header>
+      <div>
+        <Header toggleNavigation={this.toggleNavigation}></Header>
+        <Shows></Shows>
+      </div>
     );
   }
 }
