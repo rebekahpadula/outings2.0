@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from './components/Header';
 import Shows from './components/Shows';
+import EmailSubscription from './components/EmailSubscription';
 
 import NavIcon from './assets/icon-menu.svg';
 import CloseIcon from './assets/icon-close.svg';
@@ -38,6 +39,7 @@ export default class App extends Component {
       <div>
         <Header toggleNavigation={this.toggleNavigation}></Header>
         <Shows></Shows>
+        <EmailSubscription></EmailSubscription>
       </div>
     );
   }

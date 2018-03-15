@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 // building it out here by hand first because this site really needs to get done!!!
 
-const Shows = styled.section``;
+const Shows = styled.section`
+    padding: 20px;
+`;
 const ShowsHeading = styled.h1``;
 const ShowsTable = styled.table``;
 const ShowsRow = styled.tr``;

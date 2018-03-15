@@ -13,11 +13,20 @@ const Header = styled.section`
 
 const Nav = styled.nav`
     flex: 0 1 auto;
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+
+    @media screen and (min-width: 700px) {
+        position: static;
+        padding: 0;
+    }
 `;
 
 const NavToggleLink = styled.a`
     float: right;
     text-decoration: none;
+    margin-bottom: 20px;
 
     @media screen and (min-width: 700px) {
         display: none;
@@ -33,7 +42,6 @@ const NavList = styled.ul`
         margin-top: 50px;
         display: block;
         /* background-color: whatever color your header is */
-        padding: 20px;
         text-align: center;
     }
 
