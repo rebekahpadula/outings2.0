@@ -131,10 +131,8 @@ export default (props) => {
             () => {
               const obj = {
                 title: document.getElementById('title').value,
-                // this formatting is for the date and time, and I'm displaying those separately, so need
-                // to find something for that
-                time: moment(document.getElementById('time').value).format('MMM Do YY'),
-                date: document.getElementById('date').value,
+                time: moment(document.getElementById('time').value).format('h:mm A'),
+                date: moment(document.getElementById('date').value).format('MMM Do'),
                 location: document.getElementById('location').value,
                 moreInfo: document.getElementById('more-info').value,
                 upVotes: 0,

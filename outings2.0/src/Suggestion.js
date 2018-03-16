@@ -19,7 +19,7 @@ const Suggestion = styled.section`
     flex-basis: calc(50% - 40px);
 
     :not(:last-child) {
-      margin-right: 40px;
+      margin-right: 26px;
     }
   }
 
