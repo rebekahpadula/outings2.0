@@ -8,6 +8,7 @@ const Shows = styled.section`
 `;
 const ShowsHeading = styled.h1``;
 const ShowsTable = styled.table``;
+const ShowsTableBody = styled.tbody``;
 const ShowsRow = styled.tr``;
 
 const ShowsTableHeading = styled.th`
@@ -63,55 +64,57 @@ export default (props) => {
         <Shows>
             <ShowsHeading>Upcoming Shows</ShowsHeading>
             <ShowsTable>
-                <ShowsRow>
-                    <ShowsTableHeading>Date</ShowsTableHeading>
-                    <ShowsTableHeading>Event</ShowsTableHeading>
-                </ShowsRow>
-                <ShowsRow>
-                    <ShowsData>
-                        <ShowsDate><strong>Sat, Mar 10</strong> @ 9:00PM</ShowsDate>
-                    </ShowsData>
-                    <ShowsData>
-                        <ShowsEvent>Castaway's</ShowsEvent>
-                        <ShowsLocation>Georgetown, SC</ShowsLocation>
-                    </ShowsData>
-                </ShowsRow>
-                <ShowsRow>
-                    <ShowsData>
-                        <ShowsDate><strong>Sat, Mar 17</strong> @ 9:00PM</ShowsDate>
-                    </ShowsData>
-                    <ShowsData>
-                        <ShowsEvent>Wind Wing Cafe</ShowsEvent>
-                        <ShowsLocation>Harbison, SC</ShowsLocation>
-                    </ShowsData>
-                </ShowsRow>
-                <ShowsRow>
-                    <ShowsData>
-                        <ShowsDate><strong>Sat, Mar 24</strong> @ 9:00PM</ShowsDate>
-                    </ShowsData>
-                    <ShowsData>
-                        <ShowsEvent>Wild Wing Cafe</ShowsEvent>
-                        <ShowsLocation>North Charleston, SC</ShowsLocation>
-                    </ShowsData>
-                </ShowsRow>
-                <ShowsRow>
-                    <ShowsData>
-                        <ShowsDate><strong>Fri, Apr 6</strong> @ 9:00PM</ShowsDate>
-                    </ShowsData>
-                    <ShowsData>
-                        <ShowsEvent>Wild Wing Cafe</ShowsEvent>
-                        <ShowsLocation>Columbia, SC (The Vista)</ShowsLocation>
-                    </ShowsData>
-                </ShowsRow>
-                <ShowsRow>
-                    <ShowsData>
-                        <ShowsDate><strong>Sat, Apr 7</strong> @ 9:00PM</ShowsDate>
-                    </ShowsData>
-                    <ShowsData>
-                        <ShowsEvent>Hwy 378 Bar and Grill</ShowsEvent>
-                        <ShowsLocation>Gilbert, SC</ShowsLocation>
-                    </ShowsData>
-                </ShowsRow>
+                <ShowsTableBody>
+                    <ShowsRow>
+                        <ShowsTableHeading>Date</ShowsTableHeading>
+                        <ShowsTableHeading>Event</ShowsTableHeading>
+                    </ShowsRow>
+                    <ShowsRow>
+                        <ShowsData>
+                            <ShowsDate><strong>Sat, Mar 10</strong> @ 9:00PM</ShowsDate>
+                        </ShowsData>
+                        <ShowsData>
+                            <ShowsEvent>Castaway's</ShowsEvent>
+                            <ShowsLocation>Georgetown, SC</ShowsLocation>
+                        </ShowsData>
+                    </ShowsRow>
+                    <ShowsRow>
+                        <ShowsData>
+                            <ShowsDate><strong>Sat, Mar 17</strong> @ 9:00PM</ShowsDate>
+                        </ShowsData>
+                        <ShowsData>
+                            <ShowsEvent>Wind Wing Cafe</ShowsEvent>
+                            <ShowsLocation>Harbison, SC</ShowsLocation>
+                        </ShowsData>
+                    </ShowsRow>
+                    <ShowsRow>
+                        <ShowsData>
+                            <ShowsDate><strong>Sat, Mar 24</strong> @ 9:00PM</ShowsDate>
+                        </ShowsData>
+                        <ShowsData>
+                            <ShowsEvent>Wild Wing Cafe</ShowsEvent>
+                            <ShowsLocation>North Charleston, SC</ShowsLocation>
+                        </ShowsData>
+                    </ShowsRow>
+                    <ShowsRow>
+                        <ShowsData>
+                            <ShowsDate><strong>Fri, Apr 6</strong> @ 9:00PM</ShowsDate>
+                        </ShowsData>
+                        <ShowsData>
+                            <ShowsEvent>Wild Wing Cafe</ShowsEvent>
+                            <ShowsLocation>Columbia, SC (The Vista)</ShowsLocation>
+                        </ShowsData>
+                    </ShowsRow>
+                    <ShowsRow>
+                        <ShowsData>
+                            <ShowsDate><strong>Sat, Apr 7</strong> @ 9:00PM</ShowsDate>
+                        </ShowsData>
+                        <ShowsData>
+                            <ShowsEvent>Hwy 378 Bar and Grill</ShowsEvent>
+                            <ShowsLocation>Gilbert, SC</ShowsLocation>
+                        </ShowsData>
+                    </ShowsRow>
+                </ShowsTableBody>
             </ShowsTable>
         </Shows>
     )

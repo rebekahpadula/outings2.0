@@ -9,6 +9,7 @@ import MenuIcon from '../assets/icon-menu.svg';
 const Header = styled.section`
     display: flex;
     padding: 20px;
+    background-color: #1793c7;
 `;
 
 const Nav = styled.nav`
@@ -16,9 +17,11 @@ const Nav = styled.nav`
     position: absolute;
     right: 0;
     padding: 0 20px;
+    top: 65px;
+    background-color: #1793c7;
 
     @media screen and (min-width: 700px) {
-        position: static;
+        right: 20px;
         padding: 0;
     }
 `;
@@ -26,7 +29,6 @@ const Nav = styled.nav`
 const NavToggleLink = styled.a`
     float: right;
     text-decoration: none;
-    margin-bottom: 20px;
 
     @media screen and (min-width: 700px) {
         display: none;
@@ -39,7 +41,7 @@ const NavList = styled.ul`
     padding: 0;
 
     &[data-expand-content="true"] {
-        margin-top: 50px;
+        margin-top: 90px;
         display: block;
         /* background-color: whatever color your header is */
         text-align: center;
@@ -47,8 +49,7 @@ const NavList = styled.ul`
 
     @media screen and (min-width: 700px) {
         display: block;
-        margin-top: 0;
-        margin-top: 10px;
+        margin-top: 20px !important;
     }
 `;
 

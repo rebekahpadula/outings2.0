@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import Header from './components/Header';
 import Shows from './components/Shows';
-import EmailSubscription from './components/EmailSubscription';
+import Social from './components/Social';
+import Video from './components/Video';
+import Booking from './components/Booking';
+import LongBio from './components/LongBio';
+import ShortBio from './components/ShortBio';
 
 import NavIcon from './assets/icon-menu.svg';
 import CloseIcon from './assets/icon-close.svg';
@@ -15,7 +18,6 @@ export default class App extends Component {
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
-
 
   toggleNavigation() {
     // grab icon
@@ -33,13 +35,16 @@ export default class App extends Component {
     }
   }
 
-
   render() {
     return (
       <div>
+        <Social></Social>
         <Header toggleNavigation={this.toggleNavigation}></Header>
         <Shows></Shows>
-        <EmailSubscription></EmailSubscription>
+        <Video></Video>
+        <Booking></Booking>
+        <LongBio></LongBio>
+        <ShortBio></ShortBio>
       </div>
     );
   }
