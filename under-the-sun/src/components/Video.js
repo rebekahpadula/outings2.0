@@ -24,7 +24,7 @@ const Iframe = styled.iframe`
 
 export default (props) => {
     return (
-        <Video>
+        <Video id="video">
             <Iframe src="https://www.youtube.com/embed/a-oZ-N99Wls" allow="encrypted-media" allowfullscreen></Iframe>
         </Video>
     )

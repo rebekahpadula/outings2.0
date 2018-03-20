@@ -14,11 +14,11 @@ const BookingLink = styled.a``;
 
 const BounceAnimation = keyframes`
     0% {transform: translateY(0);}
-    20% {transform: translateY(-5px);}
-    40% {transform: translateY(-10px);}
-    60% {transform: translateY(-15px);}
-    80% {transform: translateY(-10px);}
-    90% {transform: translateY(-5px);}
+    20% {transform: translateY(-3px);}
+    40% {transform: translateY(-6px);}
+    60% {transform: translateY(-9px);}
+    80% {transform: translateY(-6px);}
+    90% {transform: translateY(-3px);}
     100% {transform: translateY(0);}
 `;
 
@@ -36,7 +36,7 @@ const BookingIcon = styled.img`
 
 export default (props) => {
     return (
-        <Booking>
+        <Booking id="booking">
             <BookingHeading>Book us for your next event!</BookingHeading>
             <BookingLink href="mailto:bandunderthesunsc@gmail.com"><BookingIcon src={envelopeIcon}/></BookingLink>
         </Booking>

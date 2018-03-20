@@ -5,7 +5,7 @@ import SrOnlyHeading from './SrOnlyHeading';
 
 import facebookIcon from '../assets/icon-fb.svg';
 import instagramIcon from '../assets/icon-ig.svg';
-import youtubeIcon from '../assets/icon-yt-2.svg';
+import youtubeIcon from '../assets/icon-yt.svg';
 
 const Social = styled.section`
     text-align: center;
@@ -41,7 +41,7 @@ const SocialIconsImage = styled.img`
 
 export default (props) => {
     return (
-        <Social>
+        <Social id="social">
             <SrOnlyHeading>Social media links</SrOnlyHeading>
             <SocialIconsList>
                 <SocialIconsItem><SocialIconsLink href="https://www.facebook.com/BandUnderTheSun/"><SocialIconsImage src={facebookIcon}/></SocialIconsLink></SocialIconsItem>

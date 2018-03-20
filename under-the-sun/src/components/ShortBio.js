@@ -11,7 +11,7 @@ const ShortBioContent = styled.p``;
 
 export default (props) => {
     return (
-        <ShortBio>
+        <ShortBio id="short-bio">
             <ShortBioHeading>Bio</ShortBioHeading>
             <ShortBioContent>Under The Sun is a cover band from Columbia, South Carolina. As their name rightly suggests, Under The Sun plays a variety of genres. Whether you like country, classic rock, 90’s rock, or pop, this band has something for you. Like they always say, “if you don’t like something you hear, just stick around”. The band is comprised of members Liz Johnson (vocals), Ryan Johnson (drums), Andy Johnson (sound and lights), Russ McKissick (guitar), Alex Roberts (bass and vocals), and Addie Padula (keyboards and vocals).</ShortBioContent>
         </ShortBio>

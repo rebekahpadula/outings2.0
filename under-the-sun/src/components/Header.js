@@ -43,19 +43,23 @@ const NavList = styled.ul`
     &[data-expand-content="true"] {
         margin-top: 90px;
         display: block;
-        /* background-color: whatever color your header is */
+        height: 200vh;
         text-align: center;
+        width: 30vw;
     }
 
     @media screen and (min-width: 700px) {
         display: block;
-        margin-top: 20px !important;
+        margin-top: 16px !important;
+        height: 0 !important;
+        width: 100% !important;
     }
 `;
 
 const NavItem = styled.li`
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: 18px;
+    color: #fff;
 
     @media screen and (min-width: 700px) {
         display: inline-block;
@@ -77,6 +81,7 @@ const Logo = styled.h1`
     font-family: megrim;
     margin: 0;
     font-size: 30px;
+    color: #fff;
 `;
 const LogoLink = styled.a`
     flex: 1 1 0;

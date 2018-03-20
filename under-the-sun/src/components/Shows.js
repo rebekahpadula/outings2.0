@@ -7,9 +7,21 @@ const Shows = styled.section`
     padding: 20px;
 `;
 const ShowsHeading = styled.h1``;
-const ShowsTable = styled.table``;
+const ShowsTable = styled.table`
+    border-collapse: collapse;
+    border-spacing: 0;
+`;
 const ShowsTableBody = styled.tbody``;
-const ShowsRow = styled.tr``;
+const ShowsRow = styled.tr`
+
+    &:nth-child(odd) {
+        background: linear-gradient(to right, rgba(255,224,193,1) 40%, rgba(246,246,246,1) 99%, rgba(255,255,255,1) 100%);
+    }
+
+    /* &:nth-child(even) { */
+        /* background: linear-gradient(to right, rgba(255,229,223,1) 0%, rgba(246,246,246,1) 99.9%, rgba(255,255,255,1) 100%); */
+    /* } */
+`;
 
 const ShowsTableHeading = styled.th`
     @media screen and (max-width: 699px) {
@@ -31,13 +43,6 @@ const ShowsData = styled.td`
     display: block;
     padding-right: 100px;
     padding-bottom: 10px;
-
-    /* &:after {
-        content: '';
-        width: 100%;
-        display: block;
-        border: 1px solid red;
-    } */
 
     @media screen and (min-width: 700px) {
         display: table-cell;
@@ -61,8 +66,8 @@ const ShowsLocation = styled.span`
 
 export default (props) => {
     return (
-        <Shows>
-            <ShowsHeading>Upcoming Shows</ShowsHeading>
+        <Shows id="shows">
+            <ShowsHeading>Shows</ShowsHeading>
             <ShowsTable>
                 <ShowsTableBody>
                     <ShowsRow>
@@ -71,12 +76,7 @@ export default (props) => {
                     </ShowsRow>
                     <ShowsRow>
                         <ShowsData>
-                            <ShowsDate><strong>Sat, Mar 10</strong> @ 9:00PM</ShowsDate>
-                        </ShowsData>
-                        <ShowsData>
-                            <ShowsEvent>Castaway's</ShowsEvent>
-                            <ShowsLocation>Georgetown, SC</ShowsLocation>
-                        </ShowsData>
+                            <ShowsDate><strong>Sat, Mar 10</strong> @ 9:00PM</ShowsDate></ShowsData><ShowsData><ShowsEvent>Castaway's</ShowsEvent><ShowsLocation>Georgetown, SC</ShowsLocation></ShowsData>
                     </ShowsRow>
                     <ShowsRow>
                         <ShowsData>
