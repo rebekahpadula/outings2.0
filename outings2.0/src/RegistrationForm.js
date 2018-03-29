@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// dumb anonymous function. gets its name from import
 const FormModal = styled.section`
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
@@ -20,7 +19,8 @@ const Form = styled.section`
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
     left: 0;
     margin: 0 auto;
-    max-height: 680px;
+    /* max-height: 680px; */
+    max-height: 300px;
     max-width: 350px;
     padding: 40px;
     position: absolute;
@@ -134,7 +134,7 @@ export default (props) => {
             <FormSection>
                 <FbButton onClick={() => { props.authWithFacebook() }}>Log In with Facebook</FbButton>
             </FormSection>
-            <FormSection>
+            {/* <FormSection>
                 <FormInfo>
                     <FormInfoHeading>Note:</FormInfoHeading>
                     <FormParagraph>If you don't have an account already, this form will create your account.</FormParagraph>
@@ -148,7 +148,7 @@ export default (props) => {
                 <FormLabel htmlFor="password">Password</FormLabel>
                 <FormInput className="passwordInput" type="password" id="password" ref={(input) => { this.passwordInput = input }}/>
             </FormSection>
-            <SubmitButton onClick={props.authWithEmailPassword} onSubmit={(event) => { props.authWithEmailPassword(event) }} ref={(form) => { this.loginForm = form }}>Log In</SubmitButton>
+            <SubmitButton onClick={props.authWithEmailPassword} onSubmit={(event) => { props.authWithEmailPassword(event) }} ref={(form) => { this.loginForm = form }}>Log In</SubmitButton> */}
         </Form>
     </FormModal>
   );

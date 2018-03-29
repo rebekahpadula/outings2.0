@@ -83,6 +83,7 @@ export default class App extends Component {
       this.ref.push(suggestion);
       return Object.assign({}, {suggestions: [...prevState.suggestions, suggestion], suggestionsModalActive: false});
     });
+    console.log(suggestion.time);
     document.getElementById('time').value = '';
     document.getElementById('date').value = '';
     document.getElementById('location').value = '';
@@ -131,7 +132,7 @@ export default class App extends Component {
     let provider = new firebase.auth.FacebookAuthProvider();
     provider.addScope('public_profile');
     // popup as opposed to redirecting
-    firebase.auth().signInWithPopup(provider).then(result => {
+    firebase.auth().signInWithRedirect(provider).then(result => {
       // updates state
       this.setState(prevState => Object.assign({}, prevState, {redirect: true, authenticated: true, modalActive: false}));
       // gives you a Facebook access token to access their API
@@ -210,7 +211,7 @@ export default class App extends Component {
     firebase.auth().onAuthStateChanged((user) => {
       if(user) {
         // does this actually check to see if the user is authenticated? 
-        this.setState({ authenticated: true, currentUser: user.displayName});
+        this.setState({ authenticated: true, currentUser: user.displayName });
       } else {
         this.setState({ authenticated: false, currentUser: null });
       }

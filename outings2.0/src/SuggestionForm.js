@@ -131,8 +131,8 @@ export default (props) => {
             () => {
               const obj = {
                 title: document.getElementById('title').value,
-                time: moment(document.getElementById('time').value).format('h:mm A'),
-                date: moment(document.getElementById('date').value).format('MMM Do'),
+                time: document.getElementById('time').value,
+                date: document.getElementById('date').value,
                 location: document.getElementById('location').value,
                 moreInfo: document.getElementById('more-info').value,
                 upVotes: 0,

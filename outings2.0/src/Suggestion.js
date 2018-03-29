@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
-
+import moment from 'moment';
 import calendarIcon from './assets/calendar-icon-black.svg';
 import infoIcon from './assets/info-icon-black.svg';
 import clockIcon from './assets/clock-icon-black.svg';
@@ -75,8 +75,8 @@ export default (props) => {
   return (
     <Suggestion className="suggestion">
       <SuggestionTitle>{props.suggestion.title}</SuggestionTitle>
-      <SuggestionInfo><SuggestionIcon src={calendarIcon}/>{props.suggestion.date}</SuggestionInfo>
-      <SuggestionInfo><SuggestionIcon src={clockIcon}/>{props.suggestion.time}</SuggestionInfo>
+      <SuggestionInfo><SuggestionIcon src={calendarIcon}/>{moment(props.suggestion.date).format('MMM DD')}</SuggestionInfo>
+      <SuggestionInfo><SuggestionIcon src={clockIcon}/>{moment(props.suggestion.time, "H:mm").format('h:mm A')}</SuggestionInfo>
       <SuggestionInfo><SuggestionIcon src={locationIcon}/>{props.suggestion.location}</SuggestionInfo>
       <SuggestionInfo><SuggestionIcon src={infoIcon}/>{props.suggestion.moreInfo}</SuggestionInfo>
       <Votes className="votes">
