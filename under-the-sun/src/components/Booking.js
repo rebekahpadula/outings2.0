@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
+import SrOnlyHeading from './SrOnlyHeading';
+
 import envelopeIcon from '../assets/icon-envelope.svg';
 
 const Booking = styled.section`
@@ -33,12 +35,29 @@ const BookingIcon = styled.img`
     }
 `;
 
+const BookingButton = styled.a`
+    border: 2px solid #28d1ce;
+    width: 100px;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #111;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:hover {
+        background-color: #28d1ce;
+        color: #fff;
+        transition: all .25s ease;
+    }
+`;
 
 export default (props) => {
     return (
-        <Booking id="booking">
-            <BookingHeading>Book us for your next event!</BookingHeading>
-            <BookingLink href="mailto:bandunderthesunsc@gmail.com"><BookingIcon src={envelopeIcon}/></BookingLink>
+        <Booking id="contact">
+            <SrOnlyHeading>Book us for your next event!</SrOnlyHeading>
+            <BookingButton href="mailto:bandunderthesunsc@gmail.com">Book Us</BookingButton>
+            {/* <BookingLink href="mailto:bandunderthesunsc@gmail.com"><BookingIcon src={envelopeIcon}/></BookingLink> */}
         </Booking>
     )
 }

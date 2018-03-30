@@ -7,6 +7,7 @@ import Video from './components/Video';
 import Booking from './components/Booking';
 import LongBio from './components/LongBio';
 import ShortBio from './components/ShortBio';
+import HeroImage from './components/HeroImage';
 
 import NavIcon from './assets/icon-menu.svg';
 import CloseIcon from './assets/icon-close.svg';
@@ -40,11 +41,12 @@ export default class App extends Component {
       <div>
         <Social></Social>
         <Header toggleNavigation={this.toggleNavigation}></Header>
+        <HeroImage/>
+        <ShortBio></ShortBio>
         <Shows></Shows>
         <Video></Video>
         <Booking></Booking>
         <LongBio></LongBio>
-        <ShortBio></ShortBio>
       </div>
     );
   }

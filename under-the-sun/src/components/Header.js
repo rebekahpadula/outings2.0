@@ -18,7 +18,9 @@ const Nav = styled.nav`
     right: 0;
     padding: 0 20px;
     top: 65px;
+    /* bottom: 0; */
     background-color: #1793c7;
+    background-color: rgba(23, 147, 199, 0.9);
 
     @media screen and (min-width: 700px) {
         right: 20px;
@@ -45,7 +47,7 @@ const NavList = styled.ul`
         display: block;
         height: 200vh;
         text-align: center;
-        width: 30vw;
+        width: 100vw;
     }
 
     @media screen and (min-width: 700px) {
@@ -58,15 +60,26 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
     margin-bottom: 30px;
-    font-size: 18px;
-    color: #fff;
+    font-size: 24px;
 
     @media screen and (min-width: 700px) {
+        font-size: 18px;
         display: inline-block;
         margin-bottom: 0;
         &{NavItem} {
             margin-left: 20px;
         }
+    }
+`;
+
+const NavLink = styled.a`
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #ff9832;
     }
 `;
 
@@ -86,22 +99,23 @@ const Logo = styled.h1`
 const LogoLink = styled.a`
     flex: 1 1 0;
     cursor: pointer;
+    text-decoration: none;
 `;
 
 export default (props) => {
     return (
         <Header>
-            <LogoLink><Logo>Under the Sun</Logo></LogoLink>
+            <LogoLink className="heading" href="#home"><Logo>Under the Sun</Logo></LogoLink>
             <Nav>
                 <SrOnlyHeading>Primary Navigation</SrOnlyHeading>
                 <NavToggleLink href="#" id="toggleLink" aria-label="primary navigation icon" onClick={props.toggleNavigation}>
                     <ToggleIcon src={MenuIcon} id="toggleIcon"/>
                 </NavToggleLink>
-                <NavList data-expand-content="false">
-                    <NavItem>About</NavItem>
-                    <NavItem>Shows</NavItem>
-                    <NavItem>Media</NavItem>
-                    <NavItem>Contact</NavItem>
+                <NavList className="nav-list" data-expand-content="false">
+                    <NavItem><NavLink className="primary-nav__link" href="#short-bio" data-link-active="false">About</NavLink></NavItem>
+                    <NavItem><NavLink className="primary-nav__link" href="#shows" data-link-active="false">Shows</NavLink></NavItem>
+                    <NavItem><NavLink className="primary-nav__link" href="#media" data-link-active="false">Media</NavLink></NavItem>
+                    <NavItem><NavLink  className="primary-nav__link" href="#contact" data-link-active="false">Contact</NavLink></NavItem>
                 </NavList>
             </Nav>
         </Header>

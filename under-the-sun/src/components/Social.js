@@ -9,7 +9,8 @@ import youtubeIcon from '../assets/icon-yt.svg';
 
 const Social = styled.section`
     text-align: center;
-    padding: 0 5px; 
+    padding: 0 5px;
+    background-color: #45a8d2;
     /* because of white space around icons, we only need 5px here */
 
     @media screen and (min-width: 700px) {
@@ -41,7 +42,7 @@ const SocialIconsImage = styled.img`
 
 export default (props) => {
     return (
-        <Social id="social">
+        <Social id="contact">
             <SrOnlyHeading>Social media links</SrOnlyHeading>
             <SocialIconsList>
                 <SocialIconsItem><SocialIconsLink href="https://www.facebook.com/BandUnderTheSun/"><SocialIconsImage src={facebookIcon}/></SocialIconsLink></SocialIconsItem>
