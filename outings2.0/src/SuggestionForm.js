@@ -13,7 +13,7 @@ const FormModal = styled.section`
   z-index: 10;
 `;
 
-const Form = styled.section`
+const Form = styled.form`
   background-color: #fafafa;
   border-radius: 3px;
   bottom: 0;
@@ -46,8 +46,7 @@ const FormLabel = styled.label`
 `;
 
 const FormInput = styled.input`
-  padding: 12px 20px;
-  width: 270px;
+  padding: 8px 18px;
   width: 100%;
   border-radius: 3px;
   border: 1px solid #eee;
@@ -80,7 +79,6 @@ const FormSection = styled.div`
 
 const FormTextArea = styled.textarea`
   padding: 12px 20px;
-  width: 270px;
   width: 100%;
   border-radius: 3px;
   border: 1px solid #eee;

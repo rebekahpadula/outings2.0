@@ -97,14 +97,6 @@ export default class App extends Component {
     let thumbsUpButton = thumbsUp.parentElement;
     let thumbsDownButton = thumbsDown.parentElement;
 
-    // say something here like, if they do have those attributes, DO NOTHING.
-    // if they DONT have those attribtues, then update the code. but what if
-    // people want to undo a vote? 
-    // and at the end of this function after someone clicks up or down and it updates the state,
-    // this function should disable the buttons - does that also stop the counter once they're 
-    // disabled and the function "returns" or something once the buttons have the 
-    // disabled attribute?
-
     this.setState((prevState) => {
       const newSuggestions = prevState.suggestions;
       let index = -1;

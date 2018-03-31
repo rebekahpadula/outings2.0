@@ -63,8 +63,14 @@ const LogOutButton = styled.button`
 `;
 
 const Greeting = styled.p`
-    margin-right: 80px;
     font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+    @media screen and (min-width: 900px) {
+        right: 80px;
+    }
 `;
 
 export default (props) => {
@@ -81,8 +87,8 @@ export default (props) => {
     } else {
         return (
           <Header>
-            <HeaderHeading>Outings</HeaderHeading>
             <Greeting>Hello, {props.currentUser}</Greeting>
+            <HeaderHeading>Outings</HeaderHeading>
             <Authentication>
                 <AuthenticationHeading>Log out</AuthenticationHeading>
                 <LogOutButton onClick={props.logOut}>Log Out</LogOutButton>
