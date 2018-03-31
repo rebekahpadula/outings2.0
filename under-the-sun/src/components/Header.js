@@ -10,6 +10,7 @@ const Header = styled.section`
     display: flex;
     padding: 20px;
     background-color: #1793c7;
+    /* background-color: #ff9832; // orange!! */
 `;
 
 const Nav = styled.nav`
@@ -18,9 +19,9 @@ const Nav = styled.nav`
     right: 0;
     padding: 0 20px;
     top: 65px;
-    /* bottom: 0; */
-    background-color: #1793c7;
     background-color: rgba(23, 147, 199, 0.9);
+    /* background-color: rgba(255,152,50, 0.9); */
+
 
     @media screen and (min-width: 700px) {
         right: 20px;

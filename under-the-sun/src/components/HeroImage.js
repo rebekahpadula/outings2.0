@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bandPhoto from '../assets/band-photo.jpg';
+import bandPhoto from '../assets/band-photo-3.jpg';
 
 const HeroImage = styled.img`
     height: auto;
