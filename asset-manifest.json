@@ -1,10 +1,13 @@
 {
-  "main.css": "static/css/main.5f808650.css",
-  "main.css.map": "static/css/main.5f808650.css.map",
-  "main.js": "static/js/main.a58419f3.js",
-  "main.js.map": "static/js/main.a58419f3.js.map",
-  "static/media/calendar-icon-black.svg": "static/media/calendar-icon-black.a4b07a41.svg",
-  "static/media/clock-icon-black.svg": "static/media/clock-icon-black.47024ab5.svg",
-  "static/media/info-icon-black.svg": "static/media/info-icon-black.41a01df6.svg",
-  "static/media/location-icon.svg": "static/media/location-icon.0cd3348f.svg"
+  "main.css": "static/css/main.a20191c1.css",
+  "main.css.map": "static/css/main.a20191c1.css.map",
+  "main.js": "static/js/main.31193bad.js",
+  "main.js.map": "static/js/main.31193bad.js.map",
+  "static/media/band-photo-3.jpg": "static/media/band-photo-3.898442be.jpg",
+  "static/media/icon-close.svg": "static/media/icon-close.10c8e6df.svg",
+  "static/media/icon-envelope.svg": "static/media/icon-envelope.bccc9f0c.svg",
+  "static/media/icon-fb.svg": "static/media/icon-fb.e79f03cc.svg",
+  "static/media/icon-ig.svg": "static/media/icon-ig.de5ed58d.svg",
+  "static/media/icon-menu.svg": "static/media/icon-menu.9bcf04c6.svg",
+  "static/media/icon-yt.svg": "static/media/icon-yt.c1d962d6.svg"
 }
