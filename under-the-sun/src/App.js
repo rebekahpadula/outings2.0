@@ -41,12 +41,11 @@ export default class App extends Component {
       <div>
         <Social></Social>
         <Header toggleNavigation={this.toggleNavigation}></Header>
-        <HeroImage/>
-        <ShortBio></ShortBio>
+        <HeroImage/><ShortBio></ShortBio>
         <Shows></Shows>
         <Video></Video>
         <Booking></Booking>
-        <LongBio></LongBio>
+        {/* <LongBio></LongBio> */}
       </div>
     );
   }

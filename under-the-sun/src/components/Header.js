@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SrOnlyHeading from './SrOnlyHeading';
-import Container from './Container';
 
 import MenuIcon from '../assets/icon-menu.svg';
 
@@ -21,7 +20,6 @@ const Nav = styled.nav`
     top: 65px;
     background-color: rgba(23, 147, 199, 0.9);
     /* background-color: rgba(255,152,50, 0.9); */
-
 
     @media screen and (min-width: 700px) {
         right: 20px;

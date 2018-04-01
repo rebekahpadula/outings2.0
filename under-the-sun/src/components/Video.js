@@ -8,17 +8,16 @@ const Video = styled.section`
 
 const Iframe = styled.iframe`
     border: 0;
-    width: 352px;
-    height: 198px;
+    width: 512px;
+    height: 288px;
 
     @media screen and (min-width: 700px) {
-        width: 512px;
-        height: 288px;
+
     }
 
-    @media screen and (min-width: 1000px) {
-        width: 560px;
-        height: 315px;
+    @media screen and (min-width: 700px) {
+        width: 640px;
+        height: 365px;
     }
 `;
 

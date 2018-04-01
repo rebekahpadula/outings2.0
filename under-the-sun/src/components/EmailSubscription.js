@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SrOnlyHeading from './SrOnlyHeading';
-import Container from './Container';
 
 const EmailSubscription = styled.section`
     padding: 20px;

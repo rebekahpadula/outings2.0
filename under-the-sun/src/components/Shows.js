@@ -1,35 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import bandPhoto from '../assets/band-photo-2.jpg';
+
 // building it out here by hand first because this site really needs to get done!!!
 
 const Shows = styled.section`
     padding: 20px;
 `;
 
-const ShowsHeading = styled.h1``;
+const ShowsHeading = styled.h1`
+    font-family: megrim;
+    font-size: 30px;
+`;
 const ShowsTable = styled.table`
     border-collapse: collapse;
     border-spacing: 0;
+
+    @media screen and (min-width: 700px) {
+        /* margin: 0 auto; */
+    }
 `;
 const ShowsTableBody = styled.tbody``;
 const ShowsRow = styled.tr`
      &:not(:first-child) {
-        border-bottom: 1px solid #28d1ce;
+        border-bottom: 1px solid #ff7e5f;
 
         &:hover {
-            background-color: #d4f5f5;
+            background-color: #ffe5df;
+            background-color: #f9f3e9;
         }
     }
     
     &:first-of-type {
-        background-color: #52dad7;
+        background-color: #ff7e5f;
         font-weight: bold !important;
         color: #fff;
-    }
-
-    @media screen and (min-width: 700px) {
-        border-bottom: 1px solid #28d1ce;
     }
 `;
 
@@ -47,7 +53,6 @@ const ShowsTableHeading = styled.th`
         clip: rect(0,0,0,0);
         border: 0;
     }
-    
 `;
 
 const ShowsLink = styled.a`
@@ -86,11 +91,16 @@ const ShowsLocation = styled.span`
     color: #666;
 `;
 
+const ShowsImage = styled.img`
+    display: block;
+    width: 100%;
+`;
+
 export default (props) => {
     return (
         <Shows id="shows">
-            <ShowsHeading>Shows</ShowsHeading>
             <ShowsTable>
+            <ShowsHeading>Shows</ShowsHeading>
                 <ShowsTableBody>
                     <ShowsRow>
                         <ShowsTableHeading>Date</ShowsTableHeading>
@@ -162,6 +172,7 @@ export default (props) => {
                     </ShowsRow>
                 </ShowsTableBody>
             </ShowsTable>
+            <ShowsImage src={bandPhoto} />
         </Shows>
     )
 }
