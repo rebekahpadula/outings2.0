@@ -1,49 +1,66 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bandPhoto from '../assets/band-photo-2.jpg';
-
-// building it out here by hand first because this site really needs to get done!!!
+import Booking from './Booking';
 
 const Shows = styled.section`
-    padding: 20px;
+    padding: 60px 20px;
 `;
 
 const ShowsHeading = styled.h1`
     font-family: megrim;
     font-size: 30px;
+    margin-top: 0;
 `;
+
 const ShowsTable = styled.table`
+    width: 100%;
+    max-width: 1168px;
     border-collapse: collapse;
     border-spacing: 0;
-
-    @media screen and (min-width: 700px) {
-        /* margin: 0 auto; */
-    }
+    margin: 0 auto 60px auto;
 `;
+
 const ShowsTableBody = styled.tbody``;
 const ShowsRow = styled.tr`
-     &:not(:first-child) {
-        border-bottom: 1px solid #ff7e5f;
+     &:not(:first-child):hover {
+        background-color: #f9f3e9;
+    }
 
-        &:hover {
-            background-color: #ffe5df;
-            background-color: #f9f3e9;
-        }
+    &:nth-child(even) {
+        background-color: #ffe0c1;
+    }
+
+    &:last-child {
+        border-bottom: none;
     }
     
     &:first-of-type {
-        background-color: #ff7e5f;
+        background-color: #ff9832;
         font-weight: bold !important;
         color: #fff;
+    }
+
+    @media screen and (min-width: 600px) {
+        &:nth-child(even) {
+            background-color: #fff;
+        }
+
+        &:nth-child(odd):not(:first-child) {
+            background-color: #ffe0c1;
+
+            &:hover {
+                background-color: #f9f3e9;
+            }
+        }
     }
 `;
 
 const ShowsTableHeading = styled.th`
     text-align: left;
-    padding: 10px 0 10px 5px;
+    padding: 10px 0 10px 10px;
 
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 599px) {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -64,15 +81,15 @@ const ShowsData = styled.td`
     display: block;
     padding-right: 100px;
     padding-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
 
     &:nth-child(odd) {
         padding-top: 10px;
     }
      
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 600px) {
         display: table-cell;
-        padding: 10px 100px 10px 5px;
+        padding: 10px 100px 10px 10px;
     }
 `;
 
@@ -82,18 +99,13 @@ const ShowsEvent = styled.span`
     display: block;
     margin-bottom: 5px;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 600px) {
         margin-bottom: 0;
     }
 `;
 
 const ShowsLocation = styled.span`
     color: #666;
-`;
-
-const ShowsImage = styled.img`
-    display: block;
-    width: 100%;
 `;
 
 export default (props) => {
@@ -172,7 +184,7 @@ export default (props) => {
                     </ShowsRow>
                 </ShowsTableBody>
             </ShowsTable>
-            <ShowsImage src={bandPhoto} />
+            <Booking></Booking>
         </Shows>
     )
 }

@@ -4,15 +4,13 @@ import styled from 'styled-components';
 import bandPhoto from '../assets/band-photo.jpg';
 
 const ShortBio = styled.section`
-    padding: 40px 20px;
-    /* padding-top: 40px; */
+    padding: 60px 20px;
     background-color: #f9f3e9;
-    /* color: #fff; */
 
     @media screen and (min-width: 768px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
+        grid-gap: 40px;
         align-items: center;
     }
 `;
@@ -24,8 +22,9 @@ const ShortBioHeading = styled.h1`
 `;
 
 const ShortBioContent = styled.div`
-    margin-bottom: 60px;
     flex-basis: 50%;
+    max-width: 450px;
+    margin: 0 auto 60px auto;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
@@ -37,9 +36,6 @@ const ShortBioPara = styled.p``;
 const ShortBioImage = styled.img`
     width: 100%;
     display: block;
-
-    @media screen and (min-width: 768px) {
-    }
 `;
 
 export default (props) => {

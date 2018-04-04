@@ -5,14 +5,7 @@ import SrOnlyHeading from './SrOnlyHeading';
 
 import envelopeIcon from '../assets/icon-envelope.svg';
 
-const Booking = styled.section`
-    padding: 20px;
-    text-align: center;
-`;
-
 const BookingHeading = styled.h1``;
-
-const BookingLink = styled.a``;
 
 const BounceAnimation = keyframes`
     0% {transform: translateY(0);}
@@ -36,17 +29,18 @@ const BookingIcon = styled.img`
 `;
 
 const BookingButton = styled.a`
-    border: 2px solid #28d1ce;
-    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #ff9832;
+    width: 150px;
     padding: 10px;
     font-size: 18px;
     text-decoration: none;
     color: #111;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
 
     &:hover {
-        background-color: #28d1ce;
+        background-color: #ff9832;
         color: #fff;
         transition: all .25s ease;
     }
@@ -54,10 +48,6 @@ const BookingButton = styled.a`
 
 export default (props) => {
     return (
-        <Booking id="contact">
-            <SrOnlyHeading>Book us for your next event!</SrOnlyHeading>
-            <BookingButton href="mailto:bandunderthesunsc@gmail.com">Book Us</BookingButton>
-            {/* <BookingLink href="mailto:bandunderthesunsc@gmail.com"><BookingIcon src={envelopeIcon}/></BookingLink> */}
-        </Booking>
+        <BookingButton href="mailto:bandunderthesunsc@gmail.com" id="booking">Book Us</BookingButton>
     )
 }

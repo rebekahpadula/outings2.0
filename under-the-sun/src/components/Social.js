@@ -19,10 +19,6 @@ const Social = styled.section`
     }
 `;
 
-const SocialHeading = styled.h1``;
-
-const SocialSubheading = styled.h2``;
-
 const SocialIconsList = styled.ul`
     list-style: none;
     padding: 0;

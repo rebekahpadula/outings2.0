@@ -9,7 +9,6 @@ const Header = styled.section`
     display: flex;
     padding: 20px;
     background-color: #1793c7;
-    /* background-color: #ff9832; // orange!! */
 `;
 
 const Nav = styled.nav`
@@ -19,9 +18,9 @@ const Nav = styled.nav`
     padding: 0 20px;
     top: 65px;
     background-color: rgba(23, 147, 199, 0.9);
-    /* background-color: rgba(255,152,50, 0.9); */
 
     @media screen and (min-width: 700px) {
+        position: static;
         right: 20px;
         padding: 0;
     }
@@ -94,6 +93,7 @@ const Logo = styled.h1`
     margin: 0;
     font-size: 30px;
     color: #fff;
+    max-width: 400px;
 `;
 const LogoLink = styled.a`
     flex: 1 1 0;
@@ -107,14 +107,14 @@ export default (props) => {
             <LogoLink className="heading" href="#home"><Logo>Under the Sun</Logo></LogoLink>
             <Nav>
                 <SrOnlyHeading>Primary Navigation</SrOnlyHeading>
-                <NavToggleLink href="#" id="toggleLink" aria-label="primary navigation icon" onClick={props.toggleNavigation}>
+                <NavToggleLink href="#" id="toggleLink" aria-label="primary navigation button" onClick={props.toggleNavigation}>
                     <ToggleIcon src={MenuIcon} id="toggleIcon"/>
                 </NavToggleLink>
                 <NavList className="nav-list" data-expand-content="false">
                     <NavItem><NavLink className="primary-nav__link" href="#short-bio" data-link-active="false">About</NavLink></NavItem>
                     <NavItem><NavLink className="primary-nav__link" href="#shows" data-link-active="false">Shows</NavLink></NavItem>
                     <NavItem><NavLink className="primary-nav__link" href="#media" data-link-active="false">Media</NavLink></NavItem>
-                    <NavItem><NavLink  className="primary-nav__link" href="#contact" data-link-active="false">Contact</NavLink></NavItem>
+                    <NavItem><NavLink  className="primary-nav__link" href="#booking" data-link-active="false">Booking</NavLink></NavItem>
                 </NavList>
             </Nav>
         </Header>

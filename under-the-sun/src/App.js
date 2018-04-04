@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Header from './components/Header';
 import Shows from './components/Shows';
 import Social from './components/Social';
 import Video from './components/Video';
-import Booking from './components/Booking';
 import LongBio from './components/LongBio';
 import ShortBio from './components/ShortBio';
 import HeroImage from './components/HeroImage';
 
 import NavIcon from './assets/icon-menu.svg';
 import CloseIcon from './assets/icon-close.svg';
+
+const AppContainer = styled.div`
+  max-width: 1800px;
+  margin: 0 auto;
+`;
 
 export default class App extends Component {
   constructor(props) {
@@ -38,15 +43,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <AppContainer>
         <Social></Social>
         <Header toggleNavigation={this.toggleNavigation}></Header>
         <HeroImage/><ShortBio></ShortBio>
         <Shows></Shows>
         <Video></Video>
-        <Booking></Booking>
-        {/* <LongBio></LongBio> */}
-      </div>
+      </AppContainer>
     );
   }
 }

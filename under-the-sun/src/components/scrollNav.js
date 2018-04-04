@@ -6,6 +6,11 @@ $(function(){
     const categoryHeadings = $(".heading");
     const categoryLinks = Array.prototype.slice.call(document.querySelectorAll(".primary-nav__link"));
     let activeLinkIndex = -1;
+
+    console.log("HEYYYY");
+    const toggleLink = document.getElementById('toggleLink');
+    const navList = toggleLink.nextElementSibling;
+    navList.setAttribute('data-expand-content', 'false');
     
     function getHeadingPositions() {
         return $.map(categoryHeadings, function(heading) {
@@ -72,8 +77,6 @@ $(function(){
                 });
 
                 e.target.dataset.linkActive = "true";
-                const navList = document.querySelector('.nav-list');
-                navList.dataset.expandContent = "false";
             });
         });
     });
